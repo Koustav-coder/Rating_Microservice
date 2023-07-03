@@ -1,0 +1,36 @@
+curl --location 'http://localhost:8083/ratings' \
+--header 'Content-Type: application/json' \
+--data '{
+    "rating":3,
+    "feedback":"Not so good",
+    "userId":"6723",
+    "hotelId":"RM-110"
+}'
+
+curl --location --request GET 'http://localhost:8083/ratings/hotels/RM-110' \
+--header 'Content-Type: application/json' \
+--data '{
+    "rating":3,
+    "feedback":"Not so good",
+    "userId":"6723",
+    "hotelId":"RM-110"
+}'
+
+curl --location --request GET 'http://localhost:8083/ratings/users/6723' \
+--header 'Content-Type: application/json' \
+--data '{
+    "rating":3,
+    "feedback":"Not so good",
+    "userId":"6723",
+    "hotelId":"RM-110"
+}'
+
+curl --location --request GET 'http://localhost:8083/ratings' \
+--header 'Content-Type: application/json' \
+--data '{
+    "rating":3,
+    "feedback":"Not so good",
+    "userId":"6723",
+    "hotelId":"RM-110"
+}'
+
